@@ -12,6 +12,7 @@ This repository contains a Python-based implementation for real-time person trac
    - [Face Recognition](#face-recognition)
    - [Track Management](#track-management)
    - [Logging and Frame Saving](#logging-and-frame-saving)
+   - [Generating Face Embeddings](#generating-face-embeddings)
 4. [How It Works](#how-it-works)
 5. [Running the Script](#running-the-script)
 
@@ -111,6 +112,50 @@ frame_thread = Thread(target=frame_saver)
 log_thread.start()
 frame_thread.start()
 ```
+
+### **5. Generating Face Embeddings**
+
+To recognize faces, you need to generate face embeddings for known individuals. Follow these steps:
+
+1. **Prepare Face Images:**
+   - Collect images of known individuals and organize them into folders, one folder per individual.
+
+2. **Load the InsightFace Model:**
+   ```python
+   from insightface.app import FaceAnalysis
+   import numpy as np
+
+   face_model = FaceAnalysis(providers=['CUDAExecutionProvider', 'CPUExecutionProvider'])
+   face_model.prepare(ctx_id=0, det_size=(640, 640))
+   ```
+
+3. **Extract Face Embeddings:**
+   ```python
+   import os
+   from PIL import Image
+
+   known_embeddings = []
+   known_labels = []
+
+   base_path = "path_to_known_faces"
+   for person_name in os.listdir(base_path):
+       person_folder = os.path.join(base_path, person_name)
+       for img_file in os.listdir(person_folder):
+           img_path = os.path.join(person_folder, img_file)
+           img = Image.open(img_path).convert('RGB')
+           faces = face_model.get(np.array(img))
+
+           if faces:
+               embedding = faces[0].embedding
+               known_embeddings.append(embedding)
+               known_labels.append(person_name)
+
+   np.save("known_face_embeddings.npy", np.array(known_embeddings))
+   np.save("known_labels.npy", np.array(known_labels))
+   ```
+
+4. **Save the Embeddings and Labels:**
+   - Save the embeddings and labels to `.npy` files for use during runtime.
 
 ---
 
