@@ -2,7 +2,7 @@
 
 This repository contains a Python-based implementation for real-time person tracking and face recognition using a combination of YOLOv11 for person detection and InsightFace for face recognition. The system uses threading for efficient logging and frame-saving, and it tracks known and unknown individuals in a video stream.
 
-## Here's the general flow of the system:
+** Here's the general flow of the system: **
 
 <p align="center">
   <img src="https://github.com/abdul-raouf/Person-Tracker-with-Face-Recognition/blob/main/flow_diagram.svg" alt="Flow Diagram" width="250" />
