@@ -26,6 +26,10 @@ This system will:
 </p>
 
 
+## **Demo video**
+
+<video src='https://github.com/abdul-raouf/Person-Tracker-with-Face-Recognition/blob/main/output.mp4' width=180/>
+
 ---
 
 ## **Table of Contents**
