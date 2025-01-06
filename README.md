@@ -2,8 +2,8 @@
 
 This repository contains a Python-based implementation for real-time (or file-based) multi-person tracking and face-recognition system that combines:
 
-*Ultralytics YOLO for detecting people.
-*InsightFace (ArcFace) for generating embeddings and matching faces against a known set.
+* Ultralytics YOLO for detecting people.
+* InsightFace (ArcFace) for generating embeddings and matching faces against a known set.
 
 This system will:
 
@@ -19,11 +19,11 @@ This system will:
 
 
 **Features**
-*Person Detection: Uses a YOLO model to detect and localize people in each frame.
-*Tracking: Associates detections across frames using IoU and the Hungarian Algorithm, maintaining stable track IDs.
-*Face Recognition (ArcFace): Periodically extracts face embeddings for each tracked person, compares against a known dataset, and confirms their identity after multiple consistent recognitions.
-*Threaded Logging & Frame Saving: Offloads writing JSON logs and saving frames to disk onto separate threads, ensuring minimal blocking in the main detection loop.
-*Configurable: Simple threshold-based approach (IoU, face similarity, recognition intervals, missing-frame tolerance, etc.) that can be easily tuned for real-world scenarios.
+* Person Detection: Uses a YOLO model to detect and localize people in each frame.
+* Tracking: Associates detections across frames using IoU and the Hungarian Algorithm, maintaining stable track IDs.
+* Face Recognition (ArcFace): Periodically extracts face embeddings for each tracked person, compares against a known dataset, and confirms their identity after multiple consistent recognitions.
+* Threaded Logging & Frame Saving: Offloads writing JSON logs and saving frames to disk onto separate threads, ensuring minimal blocking in the main detection loop.
+* Configurable: Simple threshold-based approach (IoU, face similarity, recognition intervals, missing-frame tolerance, etc.) that can be easily tuned for real-world scenarios.
 
 
 ---
