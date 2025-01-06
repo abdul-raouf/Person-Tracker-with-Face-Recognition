@@ -37,21 +37,21 @@ pip install opencv-python opencv-contrib-python numpy torch transformers scipy i
      ```bash
      pip install insightface
      ```
-   - Install YOLOv8:
+   - Install Ultralytics (for YOLOv11):
      ```bash
      pip install ultralytics
      ```
 
 3. **Prepare Your Environment:**
    - Ensure CUDA is installed for GPU acceleration.
-   - Place the YOLOv8 model file and face embeddings in the correct paths.
+   - Place the YOLO model file and face embeddings in the correct paths.
 
 ---
 
 ## **System Configuration**
 
 The script is pre-configured with several paths and parameters:
-- **YOLO Model Path:** Path to the YOLOv8 weights file.
+- **YOLO Model Path:** Path to the pretrained YOLO weights file.
 - **Known Embeddings Path:** Precomputed face embeddings.
 - **Stream URL:** Video stream or file path for processing.
 
