@@ -11,19 +11,19 @@ This system will:
 2. Periodically run face recognition on detected faces.
 3. Log recognized persons and frame captures once the count of known/unknown people stabilizes.
 
-**Here's the general flow of the system:**
-
-<p align="center">
-  <img src="https://github.com/abdul-raouf/Person-Tracker-with-Face-Recognition/blob/main/flow_diagram.svg" alt="Flow Diagram" width="250" />
-</p>
-
-
 **Features**
 * Person Detection: Uses a YOLO model to detect and localize people in each frame.
 * Tracking: Associates detections across frames using IoU and the Hungarian Algorithm, maintaining stable track IDs.
 * Face Recognition (ArcFace): Periodically extracts face embeddings for each tracked person, compares against a known dataset, and confirms their identity after multiple consistent recognitions.
 * Threaded Logging & Frame Saving: Offloads writing JSON logs and saving frames to disk onto separate threads, ensuring minimal blocking in the main detection loop.
 * Configurable: Simple threshold-based approach (IoU, face similarity, recognition intervals, missing-frame tolerance, etc.) that can be easily tuned for real-world scenarios.
+
+
+**Here's the general flow of the system:**
+
+<p align="center">
+  <img src="https://github.com/abdul-raouf/Person-Tracker-with-Face-Recognition/blob/main/flow_diagram.svg" alt="Flow Diagram" width="250" />
+</p>
 
 
 ---
