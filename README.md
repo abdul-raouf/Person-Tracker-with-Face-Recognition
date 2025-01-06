@@ -6,7 +6,7 @@ This repository contains a Python-based implementation for real-time person trac
 
 ### Here's the general flow of the system:
 
-![Flow Diagram](https://github.com/abdul-raouf/Person-Tracker-with-Face-Recognition/blob/main/flow_diagram.svg)
+<img src="https://github.com/abdul-raouf/Person-Tracker-with-Face-Recognition/blob/main/flow_diagram.svg" alt="Flow Diagram" width="500" />
 
 ## **Table of Contents**
 1. [Installation and Setup](#installation-and-setup)
