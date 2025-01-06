@@ -28,7 +28,8 @@ This system will:
 
 **Demo video**
 
-https://github.com/abdul-raouf/Person-Tracker-with-Face-Recognition/blob/main/output.mp4
+https://github.com/user-attachments/assets/d22fa064-df3e-4b04-bfa4-849a61ba4e64
+
 
 
 ---
