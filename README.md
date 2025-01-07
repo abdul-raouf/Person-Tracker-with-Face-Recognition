@@ -26,11 +26,9 @@ This system will:
 </p>
 
 
-**Demo video**
+**Demo**
 
-https://github.com/user-attachments/assets/d22fa064-df3e-4b04-bfa4-849a61ba4e64
-
-
+![Alt Text](https://github.com/abdul-raouf/Person-Tracker-with-Face-Recognition/blob/main/gif2.gif)
 
 ---
 
