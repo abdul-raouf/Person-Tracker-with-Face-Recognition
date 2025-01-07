@@ -28,7 +28,7 @@ This system will:
 
 **Demo**
 
-![Alt Text](https://raw.githubusercontent.com/abdul-raouf/Person-Tracker-with-Face-Recognition/main/gif2.gif)
+![Alt Text](https://raw.githubusercontent.com/abdul-raouf/Person-Tracker-with-Face-Recognition/refs/heads/main/gif2.gif)
 
 ---
 
